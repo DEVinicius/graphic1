@@ -15,7 +15,7 @@ class PythonScreen:
         # Janela
         window = sg.Window("User Data", layout)
         # Extração de dados
-        self.button, self, values = window.Read()
+        self.button, self.values = window.Read()
     
     def Start(self):
         print(self.values)
