@@ -8,8 +8,8 @@ class PythonScreen:
         # Layout
         layout = [
             #criação de Label e Input
-            [sg.Text('Nome'), sg.Input()],
-            [sg.Text('Email'), sg.Input()],
+            [sg.Text('Nome'), sg.Input(key="nome")],
+            [sg.Text('Email'), sg.Input(key="email")],
             [sg.Button("Enviar")]
         ]
         # Janela
