@@ -6,7 +6,7 @@ class Screen:
         #layout
         layout = [
             [sg.Text("Insira o Arquivo CSV")],
-            [sg.Input(key="csv_fiile"), sg.FileBrowse()],
+            [sg.Input(key="csv_file"), sg.FileBrowse()],
             [sg.Open(), sg.Cancel()]
         ]
 
@@ -17,4 +17,4 @@ class Screen:
 
     def Start(self):
         csv_file_path = self.values["csv_file"]
-        print(csv_file_path)
+        return csv_file_path
