@@ -18,7 +18,10 @@ class PythonScreen:
         self.button, self.values = window.Read()
     
     def Start(self):
-        print(self.values)
+        nome = self.values["nome"]
+        email = self.values["email"]
+        print(f"nome = {nome}")
+        print(f"email = {email}")
 
 tela = PythonScreen()
 tela.Start()
