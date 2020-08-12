@@ -6,4 +6,7 @@ csv = CSV()
 file_path = screen.Start()
 
 separator = csv.CsvVerify(file_path)
-print(separator)
+if separator == True:
+    print(f"Arquivo OK")
+else:
+    print(f"Arquivo não aceito")

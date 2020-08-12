@@ -4,6 +4,6 @@ class CSV:
         for separator_field in separator:
             if separator_field == separator[(len(separator) - 1)]:
                 if separator_field == "csv":
-                    return true
+                    return True
                 else:
-                    return false
+                    return False
