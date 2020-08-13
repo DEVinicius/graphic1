@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+import tkinter
 from Screen import Screen
 from Csv import CSV
 
