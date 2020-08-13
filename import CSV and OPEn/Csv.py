@@ -11,11 +11,7 @@ class CSV:
                     return False
 
     def OpenCsv(self, csv_file):
-        with open(csv_file,"r") as csvfile:
-            spamreader = csv.reader(csvfile, delimiter = ";")
-            # line_count = 0
-            # for row in spamreader:
-            #    # if line_count == 0:
-            #     print(f'{"  |".join(row)}')
-            #     print("")
-            return spamreader
+        with open(csv_file, newline = '') as csvfile:
+            reader = csv.DictReader(csvfile)
+            for row in reader:
+                print(row['street'], row['city'], row['zip'], row['state'])

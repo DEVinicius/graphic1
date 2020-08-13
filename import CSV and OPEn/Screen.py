@@ -27,6 +27,6 @@ class Screen:
             [sg.popup_scrolled(csv)],
         ]
 
-        window = sg.Window("CSV SHOW", layout)
+        window = sg.Window("CSV SHOW", layout, size=(500,100))
 
         self.button, self.values = window.Read()
