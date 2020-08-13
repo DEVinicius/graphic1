@@ -24,9 +24,9 @@ class Screen:
         #layout
         layout = [
             [sg.Text("Dados do Arquivo Csv")],
-            [sg.popup_scrolled(csv)],
+            [sg.Listbox(csv, size=(250,500), key=("BOX"))]
         ]
 
-        window = sg.Window("CSV SHOW", layout, size=(1000,100), element_justification = 'center')
+        window = sg.Window("CSV SHOW", layout, size=(1000,500), element_justification = 'center')
 
         self.button, self.values = window.Read()
