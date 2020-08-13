@@ -11,7 +11,10 @@ class CSV:
                     return False
 
     def OpenCsv(self, csv_file):
+        data_array = []
         with open(csv_file, newline = '') as csvfile:
             reader = csv.DictReader(csvfile)
             for row in reader:
-                print(row['street'], row['city'], row['zip'], row['state'])
+                data_array.append([row['street'], row['city'], row['zip'], row['state']])
+            return data_array
+

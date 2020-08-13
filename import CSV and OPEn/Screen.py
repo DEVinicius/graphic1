@@ -11,7 +11,7 @@ class Screen:
         ]
 
         # Window
-        window = sg.Window("CSV OPEN", layout, size=(500,100), element_justification = 'center')
+        window = sg.Window("CSV OPEN", layout, size=(1000,100), element_justification = 'center')
 
         self.button, self.values = window.Read()
         window.Close()
@@ -27,6 +27,6 @@ class Screen:
             [sg.popup_scrolled(csv)],
         ]
 
-        window = sg.Window("CSV SHOW", layout, size=(500,100))
+        window = sg.Window("CSV SHOW", layout, size=(1000,100), element_justification = 'center')
 
         self.button, self.values = window.Read()
