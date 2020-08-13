@@ -12,6 +12,7 @@ class CSV:
 
     def OpenCsv(self, csv_file):
         data_array = []
+        print(type(csv_file))
         with open(csv_file, newline = '') as csvfile:
             reader = csv.DictReader(csvfile)
             for row in reader:

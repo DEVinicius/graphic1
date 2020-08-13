@@ -9,9 +9,10 @@ class Product:
             writer.writeheader()
             writer.writerow({'name': name, 'price': price, 'quantity' : quantity, 'buy_price' : buy_price, 'sell_price': sell_price, 'brand': brand})          
 
-    def Read(self):
+    def Read(self,csv):
         data_array = []
-        with open('product.csv', newline = '') as csvfile:
+        print(type(csv))
+        with open(csv, newline = '') as csvfile:
             reader = csv.DictReader(csvfile)
             for row in reader:
                 data_array.append([row['name'], row['price'], row['quantity'], row['buy_price'], row['sell_price'], row['brand']])

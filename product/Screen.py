@@ -11,7 +11,7 @@ class Screen:
             [sg.Text("Preço de Compra"), sg.Input(size=(50,10),key="buy_price")],
             [sg.Text("Preço de Venda"), sg.Input(size=(50,10),key="sell_price")],
             [sg.Text("Marca"), sg.Input(size=(50,10),key="brand")],
-            [sg.Button("Cadastrar"), sg.Button('Ver Produtos')]
+            [sg.Button("Cadastrar")]
         ]
 
         window = sg.Window("Cadastro de produtos", layout)
@@ -19,11 +19,10 @@ class Screen:
         self.button, self.values = window.Read()
         window.Close()
 
-    def ShowProducts(self, csv):
-
-
     def Start(self):
         self.MainPage()
+        print(self.button)
+        product = Product()
         if self.button == 'Cadastrar':
             name = self.values["name"]
             price = self.values["price"]
@@ -32,10 +31,7 @@ class Screen:
             sell_price = self.values["sell_price"]
             brand = self.values["brand"]
             
-            product = Product()
             product.Write(name, price, quantity, buy_price, sell_price, brand)
             self.MainPage()
-        elif self.button == 'Ver Produtos':
-            self.ShowProducts()
         else:
             exit()
