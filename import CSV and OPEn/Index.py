@@ -5,8 +5,10 @@ screen = Screen()
 csv = CSV()
 file_path = screen.Start()
 
-separator = csv.CsvVerify(file_path)
-if separator == True:
-    print(f"Arquivo OK")
+csv_file = csv.CsvVerify(file_path)
+
+if csv_file == False:
+    exit()
 else:
-    print(f"Arquivo não aceito")
+    screen.SecondScreen(csv.OpenCsv(csv_file))
+    

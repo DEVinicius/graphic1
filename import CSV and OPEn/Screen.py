@@ -11,10 +11,22 @@ class Screen:
         ]
 
         # Window
-        window = sg.Window("CSV OPEN", layout)
+        window = sg.Window("CSV OPEN", layout, size=(500,100), element_justification = 'center')
 
         self.button, self.values = window.Read()
+        window.Close()
 
     def Start(self):
         csv_file_path = self.values["csv_file"]
         return csv_file_path
+
+    def SecondScreen(self, csv):
+        #layout
+        layout = [
+            [sg.Text("Dados do Arquivo Csv")],
+            [sg.popup_scrolled(csv)],
+        ]
+
+        window = sg.Window("CSV SHOW", layout)
+
+        self.button, self.values = window.Read()
